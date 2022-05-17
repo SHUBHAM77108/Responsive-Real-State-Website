@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- icons for social media -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            scroll-padding-top: 3rem;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* login */
+                        /* header */
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 35px;
+        }
+
+        .container {
+            max-width: 1068px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header {
+            display: block;
+            width: 100%;
+            background: #d78781;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        header .logo {
+            color: #fff;
+            font-weight: 700;
+            font-size: 2em;
+            text-decoration: none;
+        }
+
+        header .logo span {
+            color: #5670d7;
+        }
+
+        header .logo:hover {
+            letter-spacing: 1px;
+            color: #eb7724;
+        }
+
+        .btn {
+            font-size: 1em;
+            color: #fff;
+            background: #5670d7;
+            display: inline-block;
+            padding: 10px 30px;
+            margin-top: 20px;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 2px;
+            transition: 0.5s;
+            border-radius: 1rem;
+        }
+
+        .btn:hover {
+            letter-spacing: 4px;
+            background: #eb7724;
+        }
+
+                /* main */
+
+        .login {
+            display: grid;
+            grid-template-columns: 0.4fr 1fr;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.789rem;
+            margin-bottom: -4rem;
+        }
+
+        .login img {
+            width: 73%;
+            margin-left: 137px;
+            margin-bottom: -57px;
+        }
+
+
+        .login-container h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0px;
+            color: #00549e;
+        }
+
+        .login-container p {
+            font-size: 0.9rem;
+            color: #00549e;
+        }
+
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-container form span {
+            font-size: 0.9rem;
+            color: #8a8a8a;
+            margin-bottom: 4px;
+        }
+
+        .login-container form input {
+            border: 1px solid #8a8a8a;
+            outline: none;
+            padding: 10px;
+            margin-bottom: 1rem;
+            background: #fbfbfb;
+            border-radius: 4px;
+        }
+
+        .login-container form .button {
+            outline: none;
+            border: none;
+            background: #5670d7;
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .login-container form .button:hover {
+            background: #eb7724;
+        }
+
+        .login-container a {
+            font-size: 0.9rem;
+            text-align: right;
+        }
+
+        .login-container .btn {
+            border-radius: 4px;
+            text-align: center;
+        }
+
+
+        /* footer */
+
+        .footer {
+            background: #d78781;
+            color: #fff;
+            border-radius: 1rem 1rem 0 0;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+            gap: 2rem;
+            padding-top: 27px;
+        }
+
+        .footer-container h2 {
+            font-size: 1.7rem;
+            font-weight: 500;
+            color: #111;
+        }
+
+        .footer-container span {
+            color: #00549e;
+        }
+
+        .footer-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-box h3 {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .footer-box a {
+            font-size: 00.8rem;
+            color: #fff;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-box a:hover {
+            color: #cd5050;
+        }
+
+        .social a {
+            font-size: 20px;
+            margin-right: 1rem;
+        }
+
+        .social a:hover {
+            color: #5670d7;
+        }
+
+
+        /* copyright */
+
+        .copyright {
+            padding: 20px;
+            text-align: center;
+            background-color: #d78781;
+            color: #fff;
+        }
+
+
+        /* making Responsive */
+        @media (max-width:1080px) {
+            .container {
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+        }
+
+        @media (max-width:880px) {
+            .footer-container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+                gap: 1rem;
+            }
+
+            .login {
+                grid-template-columns: 0.6fr 1fr;
+            }
+
+            .login img {
+                width: 91%;
+                margin-left: 46px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 10px 0;
+            }
+
+            .login img {
+                width: 93%;
+                margin-left: 27px;
+            }
+        }
+
+        @media (max-width: 638px) {
+
+            .login {
+                grid-template-columns: 0.8fr 1fr;
+            }
+
+            .login {
+                margin-top: 3rem;
+            }
+
+            .login img {
+                width: 93%;
+                margin-left: 27px;
+            }
+        }
+
+        @media (max-width: 572px) {
+            .SingUp-image {
+                display: none;
+
+            }
+
+            .login {
+                justify-content: center;
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 442px) {
+
+            .footer {
+                border-radius: 1rem 0 1rem 0;
+            }
+        }
+
+
+        /* making Responsive */
+
+        @media (max-height: 638px) {
+
+            .login {
+                grid-template-columns: 0.8fr 1fr;
+            }
+
+            .login {
+                margin-top: 3rem;
+            }
+
+            .login img {
+                width: 93%;
+                margin-left: 27px;
+            }
+        }
+
+        @media (max-height: 606px) {
+            .SingUp-image {
+                display: none;
+
+            }
+
+            .login {
+                justify-content: center;
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-height: 442px) {
+
+            .footer {
+                border-radius: 1rem 0 1rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav container">
+            <a href="index.html" class="logo">Food <span>.</span></a>
+            <a href="login.html" class="btn">Log In</a>
+        </div>
+    </header>
+    <!-- Sign Up -->
+    <div class="login container">
+        <div class="login-container">
+            <h2>Welcome, Let's get started</h2>
+            <!-- <p>Already have account <a href="login.html">Log In</a></p> -->
+            <!-- login for -->
+            <form action="">
+                <span>Full Name</span>
+                <input type="text" placeholder="Your Name" required>
+                <span>Enter your email address</span>
+                <input type="email" placeholder="yourmail@gmail.com" required>
+                <span>Phone Number</span>
+                <input type="tel" placeholder="Enter your Number" required>
+                <span>Enter Your password</span>
+                <input type="password" name="" id="" placeholder="Password" required>
+                <input type="submit" value="Sing Up" class="button">
+                <a href="login.html">Already have account?</a>
+            </form>
+            <a href="login.html" class="btn">Log In</a>
+        </div>
+        <!-- login image -->
+        <div class="SingUp-image">
+            <img src="/img/signup.gif" alt="">
+
+        </div>
+    </div>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="footer-container container">
+            <h2>Food<span>.</span></h2>
+            <div class="footer-box">
+                <h3>Menu</h3>
+                <a href="#">Veg Pizza</a>
+                <a href="#">Chicken Pizza</a>
+                <a href="#">Pizza Crust</a>
+                <a href="#">Beverages</a>
+                <a href="#">Pizza Mania</a>
+                <a href="#">Burger Pizza</a>
+            </div>
+            <div class="footer-box">
+                <h3>LEGAL</h3>
+                <a href="#"> Disclaimer</a>
+                <a href="#"> Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <a href="#">+91 77108++++</a>
+                <a href="#">subhamvishwakarma+++@gmail.com</a>
+                <div class="social">
+                    <a href="https://www.facebook.com/subham.vishwakarma.940641"><i class='bx bxl-meta'></i></a>
+                    <a href="https://twitter.com/Shubham771087?t=rwcpWCXbOd7G05BJZjP7Ag&s=09"><i
+                            class='bx bxl-twitter'></i></a>
+                    <a href="https://instagram.com/__shubham_vishwakarma?igshid=YmMyMTA2M2Y="><i
+                            class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/SHUBHAM77108"><i class='bx bxl-github'></i></a>
+                    <a href="linkedin.com/in/shubham-vishwakarma-6b22b0206"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- copyright -->
+    <div class="copyright">
+        <p>&#169; shubtack All Right Reserved</p>
+    </div>
+</body>
+
+</html>
