@@ -62,7 +62,10 @@ body {
 
                     /* Btn */
 
-
+#login-btn{
+    margin-top: 0px;
+    margin-left: 15px;
+}
 .btn {
     font-size: 1em;
     color: #fff;
@@ -78,7 +81,7 @@ body {
 }
 
 .btn:hover {
-    letter-spacing: 4px;
+    /* letter-spacing: 4px; */
     background: #eb7724;
 }
             
@@ -88,7 +91,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 100px;
+    padding: 10px 50px;
     z-index: 10000;
     display: flex;
     justify-content: space-between;
@@ -98,7 +101,7 @@ header {
 
 header.sticky {
     background: #d78781;
-    padding: 40px 100px;
+    padding: 10px 50px;
     box-shadow: 0 8px 24px hsla(324.5, 20.4%, 42.4%);
 }
 
@@ -125,6 +128,7 @@ header .logo span {
 header .navigation {
     position: relative;
     display: flex;
+    align-items: center;
 }
 
 header .navigation li {
